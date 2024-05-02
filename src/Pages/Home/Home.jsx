@@ -3,6 +3,7 @@ import { databases } from '../../Appwrite/Auth'
 import conf from '../../conf/conf'
 import HomePostCard from './HomePostCard'
 import './style.css'
+import { Helmet } from 'react-helmet'
 
 
 function Home() {
@@ -36,6 +37,15 @@ function Home() {
 
   return (
     <>
+    <Helmet>
+        {/* Optimize title tag */}
+        <title>Friend fusion</title>
+        {/* Add meta description */}
+        <meta
+          name="description"
+          content="friend fusion - The ultimate social media app for sharing your reactions online and engaging with others. Join now!"
+        />
+      </Helmet>
     <div className='card pt-16'>
         {data && data.length!==0 && data.map((item)=>(
         <div key={item.$id} className='lala m-3 rounded-md'>
