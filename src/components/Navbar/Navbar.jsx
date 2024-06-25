@@ -31,7 +31,7 @@ function Navbar() {
         e.preventDefault()
         try {
          await account.deleteSession("current")
-          navigate("/signin");
+          navigate("/");
           dispatch(AuthLogout());
       } catch (error) {
           console.log(error);
