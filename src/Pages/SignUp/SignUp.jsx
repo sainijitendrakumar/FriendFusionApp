@@ -24,7 +24,7 @@ const navigate=useNavigate()
       alert(error)
     })
     if(promice){
-      navigate("/signin")
+      navigate("/")
     }
     
   }
